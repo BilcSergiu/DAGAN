@@ -48,7 +48,7 @@ def sample_generator(num_generations, sess, same_images, inputs, dropout_rate, d
     image = (image - np.min(image)) / (np.max(image) - np.min(image))
     image = image * 255
     image = image[:, (num_generations-1)*height:]
-	imageio.imwrite(file_name, image)
+    imageio.imwrite(file_name, image)
     #scipy.misc.imsave(file_name, image)
 
 def sample_two_dimensions_generator(sess, same_images, inputs,
