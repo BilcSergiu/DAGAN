@@ -334,7 +334,7 @@ class VGGFaceDAGANDataset(DAGANDataset):
 
     def load_dataset(self, gan_training_index):
 
-        self.x = np.load("datasets/vgg_face_data.npy")
+        self.x = np.load("/content/drive/My Drive/vgg_face_data.npy")
         self.x = self.x / np.max(self.x)
         self.x = np.reshape(self.x, newshape=(2354, 100, 64, 64, 3))
         x_train, x_test, x_val = self.x[:1803], self.x[1803:2300], self.x[2300:]
